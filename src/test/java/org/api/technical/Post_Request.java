@@ -30,7 +30,9 @@ public class Post_Request {
         String responseBody = response.getBody ( ).asString ( );
         System.out.println ("response body:" +responseBody);
        Assert.assertEquals ( responseBody.contains ( "customerId"), true );
-          Assert.assertEquals ( responseBody.contains ( "emaiId"), true );// The test case fails because the response body doen not contain emaiId
+          Assert.assertEquals ( responseBody.contains ( "emaiId"), true );// The Assertion  fails because the response body doen not contain emaiId
+         Assert.assertEquals ( responseBody.contains ( "firstName"), true );// The Assertion fails because the response body does not contain firstName
+         Assert.assertEquals ( responseBody.contains ( "lastName"), true );//The Assertion fails because the response body does not contain lastName.
        int statusCode = response.getStatusCode ( );
         Assert.assertEquals ( statusCode, 200 );
     }
